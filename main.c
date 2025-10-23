@@ -46,7 +46,7 @@ void Task1 (void *pv)
         }
  
         var->id = seq++;
-        var->random_number = rand();
+        var->random_number = +seq;
  
         if(xQueueSend(fila, &var, 0) != pdTRUE)
         {
